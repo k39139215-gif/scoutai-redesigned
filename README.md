@@ -8,7 +8,7 @@
 [![Live Demo](https://img.shields.io/badge/Demo-Live_Preview-success?logo=githubpages&logoColor=white)](https://k39139215-gif.github.io/scoutai-redesigned/)
 
 ### 🌐 Live UI Preview
-👉 **[Open ScoutAI Live Preview (24/7 Permanent)](https://k39139215-gif.github.io/scoutai-redesigned/)**
+👉 **[Open Scout Live Preview](https://k39139215-gif.github.io/scoutai-redesigned/)**
 
 > **Enterprise Talent Intelligence & Recruitment Operating System** built for modern talent teams to manage multi-client hiring pipelines, compute real-time candidate match scores, and enforce GDPR-compliant recruitment governance.
 
