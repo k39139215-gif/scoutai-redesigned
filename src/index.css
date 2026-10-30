@@ -1,0 +1,700 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ==========================================================================
+     1. COLOR SYSTEM (Snow UI / ChatGPT iOS inspired monochrome & semantic)
+     ========================================================================== */
+
+  /* Primary Surfaces (90%+ Neutral Canvas & Card System) */
+  --bg-page: #fafafb;
+  --bg-surface: #ffffff;
+  --bg-elevated: #ffffff;
+  --bg-subtle: #f4f4f6;
+  --bg-hover: #f0f0f3;
+  --bg-active: #e6e6eb;
+
+  /* Aliases for backwards compatibility */
+  --color-bg-canvas: var(--bg-page);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-subtle: var(--bg-subtle);
+  --color-bg-subtle-hover: var(--bg-hover);
+  --color-bg-subtle-active: var(--bg-active);
+
+  /* Typography Colors */
+  --text-primary: #111111;
+  --text-secondary: #5a5a60;
+  --text-muted: #8e8e93;
+  --text-disabled: #c7c7cc;
+  --text-inverse: #ffffff;
+
+  /* Aliases */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-disabled: var(--text-disabled);
+  --color-text-inverse: var(--text-inverse);
+
+  /* Borders & Dividers (Super Subtle 1px Hairlines) */
+  --border-subtle: #f0f0f4;
+  --border-default: #e6e6eb;
+  --border-strong: #d1d1d6;
+  --border-focus: #111111;
+
+  /* Aliases */
+  --color-border: var(--border-default);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-hover: var(--border-strong);
+  --color-border-focus: var(--border-focus);
+  --color-divider: var(--border-subtle);
+
+  /* Brand Primary (Understated Monochrome) */
+  --color-primary: #111111;
+  --color-primary-hover: #262626;
+  --color-primary-active: #000000;
+  --color-primary-subtle: rgba(17, 17, 17, 0.05);
+
+  /* Semantic Meaning Colors (Subtle & Restrained) */
+  --color-success: #28a745;
+  --color-success-subtle: #edf7ee;
+  --color-success-border: #c3e6cb;
+  --color-success-text: #1e7e34;
+
+  --color-warning: #d97706;
+  --color-warning-subtle: #fef8ee;
+  --color-warning-border: #fde3b6;
+  --color-warning-text: #92400e;
+
+  --color-danger: #dc3545;
+  --color-danger-subtle: #fdf2f2;
+  --color-danger-border: #f8d7da;
+  --color-danger-text: #bd2130;
+
+  --color-accent-blue: #0066cc;
+  --color-accent-blue-subtle: #edf4fc;
+  --color-accent-blue-border: #c8e0f8;
+  --color-accent-blue-text: #0052a3;
+
+  --color-ai-neutral: #4a5568;
+  --color-ai-neutral-subtle: #f7fafc;
+  --color-ai-neutral-border: #e2e8f0;
+
+  /* ==========================================================================
+     2. TYPOGRAPHY SYSTEM (Inter with optical tracking)
+     ========================================================================== */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-mono: 'SF Mono', 'Roboto Mono', Menlo, Monaco, Consolas, monospace;
+
+  /* Font Sizes */
+  --font-size-2xs: 10px;
+  --font-size-xs: 11.5px;
+  --font-size-sm: 13px;
+  --font-size-base: 14px;
+  --font-size-md: 15px;
+  --font-size-lg: 17px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 28px;
+  --font-size-4xl: 32px;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.6;
+
+  /* Tracking (Letter Spacing) */
+  --tracking-tighter: -0.03em;
+  --tracking-tight: -0.02em;
+  --tracking-normal: -0.006em;
+  --tracking-wide: 0.04em;
+
+  /* ==========================================================================
+     3. SPACING SYSTEM (4, 8, 12, 16, 20, 24, 32, 40, 48)
+     ========================================================================== */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* ==========================================================================
+     4. RADIUS SYSTEM (Figma Snow UI inspired)
+     ========================================================================== */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+  --radius-2xl: 18px;
+  --radius-full: 9999px;
+
+  /* ==========================================================================
+     5. SHADOW & ELEVATION SYSTEM (Figma Floating Surfaces & Overlays)
+     ========================================================================== */
+  --shadow-e0: none;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.02);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-e1: 0 4px 16px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.03);
+  --shadow-e2: 0 16px 40px rgba(0, 0, 0, 0.10), 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-dropdown: 0 8px 24px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  --shadow-modal: 0 20px 48px rgba(0, 0, 0, 0.12), 0 6px 16px rgba(0, 0, 0, 0.06);
+  --shadow-drawer: -6px 0 36px rgba(0, 0, 0, 0.08);
+
+  /* Aliases */
+  --shadow-none: var(--shadow-e0);
+  --shadow-subtle: var(--shadow-card);
+
+  /* ==========================================================================
+     6. MOTION & TRANSITIONS
+     ========================================================================== */
+  --duration-fast: 150ms;
+  --duration-normal: 220ms;
+  --duration-slow: 300ms;
+
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --transition-fast: var(--duration-fast) var(--ease-standard);
+  --transition-base: var(--duration-normal) var(--ease-standard);
+  --transition-smooth: var(--duration-normal) var(--ease-emphasized);
+
+  /* ==========================================================================
+     7. GLOBAL DIMENSIONS & BREAKPOINTS
+     ========================================================================== */
+  --sidebar-width: 250px;
+  --header-height: 56px;
+  --max-content-width: 1400px;
+}
+
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--tracking-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+}
+
+/* Accessibility & Interactive Cursors */
+button, select, [role="button"], .interactive-row {
+  cursor: pointer;
+  user-select: none;
+}
+
+input, textarea {
+  cursor: text;
+}
+
+button:disabled, input:disabled, select:disabled, textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   CARD & SURFACE SYSTEM (Snow UI Clean Surfaces)
+   ========================================================================== */
+.snow-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.snow-card-interactive {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+  cursor: pointer;
+}
+.snow-card-interactive:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-card-hover);
+}
+.snow-card-interactive:active {
+  background: var(--bg-subtle);
+}
+
+/* ==========================================================================
+   STATUS BADGES & TAGS
+   ========================================================================== */
+.snow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 7px;
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  line-height: 16px;
+  letter-spacing: var(--tracking-normal);
+  border: 1px solid transparent;
+}
+
+.snow-badge-default {
+  background: var(--bg-subtle);
+  color: var(--text-secondary);
+  border-color: var(--border-default);
+}
+
+.snow-badge-success {
+  background: var(--color-success-subtle);
+  color: var(--color-success-text);
+  border-color: var(--color-success-border);
+}
+
+.snow-badge-warning {
+  background: var(--color-warning-subtle);
+  color: var(--color-warning-text);
+  border-color: var(--color-warning-border);
+}
+
+.snow-badge-danger {
+  background: var(--color-danger-subtle);
+  color: var(--color-danger-text);
+  border-color: var(--color-danger-border);
+}
+
+.snow-badge-blue {
+  background: var(--color-accent-blue-subtle);
+  color: var(--color-accent-blue-text);
+  border-color: var(--color-accent-blue-border);
+}
+
+.snow-badge-ai {
+  background: var(--bg-subtle);
+  color: var(--text-primary);
+  border-color: var(--border-default);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   GLOBAL BUTTON STYLES
+   ========================================================================== */
+.snow-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--font-family-base);
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+.snow-btn:active:not(:disabled) {
+  transform: scale(0.985);
+}
+
+.snow-btn-primary {
+  background: var(--color-primary);
+  color: var(--text-inverse);
+}
+.snow-btn-primary:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.snow-btn-secondary {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border-color: var(--border-default);
+}
+.snow-btn-secondary:hover:not(:disabled) {
+  background: var(--bg-subtle);
+  border-color: var(--border-strong);
+}
+
+.snow-btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+.snow-btn-ghost:hover:not(:disabled) {
+  background: var(--bg-subtle);
+  color: var(--text-primary);
+}
+
+.snow-btn-danger {
+  background: var(--color-danger-subtle);
+  color: var(--color-danger-text);
+  border-color: var(--color-danger-border);
+}
+.snow-btn-danger:hover:not(:disabled) {
+  background: var(--color-danger);
+  color: #ffffff;
+}
+
+.snow-btn-success {
+  background: var(--color-success-subtle);
+  color: var(--color-success-text);
+  border-color: var(--color-success-border);
+}
+.snow-btn-success:hover:not(:disabled) {
+  background: var(--color-success);
+  color: #ffffff;
+}
+
+/* Button Sizes */
+.snow-btn-sm {
+  height: 28px;
+  padding: 0 10px;
+  font-size: var(--font-size-xs);
+}
+.snow-btn-md {
+  height: 34px;
+  padding: 0 14px;
+  font-size: var(--font-size-sm);
+}
+.snow-btn-lg {
+  height: 40px;
+  padding: 0 18px;
+  font-size: var(--font-size-base);
+}
+
+/* ==========================================================================
+   INPUTS & FORM CONTROLS
+   ========================================================================== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: var(--tracking-normal);
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  outline: none;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.form-input:hover, .form-select:hover, .form-textarea:hover {
+  border-color: var(--border-strong);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--color-primary);
+  background: #ffffff;
+}
+
+.form-input:disabled, .form-select:disabled, .form-textarea:disabled {
+  background: var(--bg-subtle);
+  color: var(--text-disabled);
+  border-color: var(--border-subtle);
+}
+
+.form-input::placeholder, .form-textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form-error {
+  font-size: var(--font-size-xs);
+  color: var(--color-danger-text);
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+.snow-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+}
+
+.snow-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.snow-table th {
+  padding: 10px 16px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-page);
+  border-bottom: 1px solid var(--border-subtle);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.snow-table td {
+  padding: 12px 16px;
+  font-size: var(--font-size-sm);
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  vertical-align: middle;
+}
+
+.snow-table tr:last-child td {
+  border-bottom: none;
+}
+
+.snow-table tbody tr {
+  transition: background var(--transition-fast);
+}
+
+.snow-table tbody tr:hover {
+  background: var(--bg-subtle);
+}
+
+/* ==========================================================================
+   MODAL & DRAWER OVERLAYS (Figma Elevation & Mobile Sheet Support)
+   ========================================================================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justifyContent: center;
+  padding: 20px;
+  animation: fadeIn var(--duration-fast) var(--ease-standard) forwards;
+}
+
+.modal-content {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-modal);
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalScaleIn var(--duration-normal) var(--ease-emphasized) forwards;
+}
+
+.drawer-content {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  max-width: 580px;
+  background: var(--bg-surface);
+  border-left: 1px solid var(--border-default);
+  box-shadow: var(--shadow-drawer);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  animation: drawerSlideIn var(--duration-normal) var(--ease-emphasized) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes drawerSlideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+/* ==========================================================================
+   TOGGLE SWITCH
+   ========================================================================== */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border-strong);
+  transition: var(--transition-base);
+  border-radius: var(--radius-full);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: var(--transition-base);
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+input:checked + .slider {
+  background-color: var(--color-primary);
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+/* ==========================================================================
+   PAGE VIEW TRANSITION & ANIMATIONS
+   ========================================================================== */
+.view-container {
+  animation: viewEnter var(--duration-normal) var(--ease-emphasized) forwards;
+}
+
+@keyframes viewEnter {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .view-container, .modal-backdrop, .modal-content, .drawer-content {
+    animation: none !important;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-default);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS (Desktop 1440px, Tablet 1024px, Mobile 390px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .hub-badge-desktop {
+    display: none !important;
+  }
+  .main-view-container {
+    padding: var(--space-5) var(--space-5) var(--space-8) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar-desktop {
+    display: none !important;
+  }
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+  .sidebar-mobile-open {
+    display: flex !important;
+    position: fixed !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000 !important;
+    box-shadow: var(--shadow-modal);
+  }
+  .demo-stamp {
+    display: none !important;
+  }
+  .main-view-container {
+    padding: var(--space-4) var(--space-3) var(--space-6) !important;
+  }
+  .modal-content {
+    border-radius: var(--radius-lg);
+  }
+  .drawer-content {
+    max-width: 100% !important;
+  }
+}
