@@ -1,14 +1,14 @@
-# ScoutAI Redesigned — AI-Native Talent Intelligence Operating System
+# ScoutAI — AI-Native Talent Intelligence Operating System
 
 [![React](https://img.shields.io/badge/React-19.2-blue?logo=react&logoColor=white)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-8.2-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Design System](https://img.shields.io/badge/Design_Tokens-Custom_CSS-orange)]()
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary_All_Rights_Reserved-red.svg)](LICENSE)
-[![Live Demo](https://img.shields.io/badge/Demo-Live_Preview-success?logo=githubpages&logoColor=white)](https://k39139215-gif.github.io/scoutai-redesigned/)
+[![Live Demo](https://img.shields.io/badge/Demo-Live_Preview-success?logo=githubpages&logoColor=white)](https://k39139215-gif.github.io/scoutai/)
 
-### 🌐 Live UI Preview
-👉 **[Open Scout Live Preview](https://k39139215-gif.github.io/scoutai-redesigned/)**
+### 🌐 Live Interactive Application Preview
+👉 **[Click Here to Open ScoutAI Live Interactive App](https://k39139215-gif.github.io/scoutai/)**
 
 > **Enterprise Talent Intelligence & Recruitment Operating System** built for modern talent teams to manage multi-client hiring pipelines, compute real-time candidate match scores, and enforce GDPR-compliant recruitment governance.
 
@@ -18,7 +18,31 @@
 
 Traditional applicant tracking systems (ATS) are glorified relational databases that force recruiters into manual spreadsheet exports, fragmented email threads, and untracked candidate interactions. 
 
-**ScoutAI Redesigned** shifts recruitment from reactive record-keeping to **autonomous talent intelligence**. It couples an interactive multi-view workspace with automated candidate scoring algorithms, talent pipeline kanbans, multi-channel outreach management, and enterprise data privacy compliance.
+**ScoutAI** shifts recruitment from reactive record-keeping to **autonomous talent intelligence**. It couples an interactive multi-view workspace with automated candidate scoring algorithms, talent pipeline kanbans, multi-channel outreach management, and enterprise data privacy compliance.
+
+---
+
+## 🖼️ UI Screens & Platform Walkthrough
+
+### 1. Executive Intelligence Dashboard
+Real-time talent pipeline metrics, candidate attention queue, and AI autonomous screening stream.
+![ScoutAI Executive Dashboard](docs/screens/scout-dashboard.png)
+
+### 2. Multi-Stage Hiring Pipeline & Job Workspace
+Visual drag-and-drop Kanban lifecycle (`Sourced` &rarr; `Screened` &rarr; `Interview Loop` &rarr; `Offer` &rarr; `Hired`).
+![ScoutAI Jobs Pipeline](docs/screens/scout-jobs-pipeline.png)
+
+### 3. Candidate Intelligence & Match Scoring
+Deep resume parsing, skills gap radar, and algorithmic qualification scoring.
+![ScoutAI Candidate Intelligence](docs/screens/scout-candidate-intelligence.png)
+
+### 4. Autonomous Sourcing & Outreach Cadence
+Multi-channel automated outreach sequences with engagement and response tracking.
+![ScoutAI Outreach Automation](docs/screens/scout-outreach.png)
+
+### 5. Talent Velocity Analytics & Conversion Funnel
+Time-to-hire velocity tracking, drop-off analytics, and team efficiency metrics.
+![ScoutAI Analytics](docs/screens/scout-analytics.png)
 
 ---
 
